@@ -481,4 +481,66 @@ footer a:hover { color: var(--color-gold) !important; }
 .whatsapp-float-right:hover { transform: scale(1.1); background-color: #1ebe57; color: white; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
 
+
+/* =========================================
+   OPTIMIZACIÓN PARA CELULARES (MÓVIL)
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* 1. Ajustar Títulos Gigantes */
+    h1.display-3 {
+        font-size: 2.2rem !important; /* Texto más pequeño en el Hero */
+    }
+    .section-title {
+        font-size: 1.8rem; /* Títulos de sección más chicos */
+    }
+    
+    /* 2. Ajustar Fondo de Tuberías en Móvil */
+    .hero-static-bg::before,
+    #servicios.bg-dark-blue::before {
+        /* Hacemos las tuberías de fondo más chicas para que se entienda la textura */
+        background-size: 300px auto; 
+        opacity: 0.25; /* Un poco más suave para leer mejor en pantallas chicas */
+    }
+
+    /* 3. Botones más fáciles de tocar */
+    .hero-content .btn {
+        display: block;      /* Un botón por línea */
+        width: 100%;         /* Ancho completo */
+        margin-right: 0 !important; /* Quitar margen derecho */
+        margin-bottom: 15px; /* Separación entre botones */
+    }
+
+    /* 4. Reducir Espacios en Blanco (Padding) */
+    .py-section {
+        padding: 40px 0; /* Menos espacio arriba y abajo */
+    }
+    .hero-static-bg {
+        padding-top: 100px; /* Ajuste para que no choque con el menú */
+        min-height: auto;   /* Altura automática según el contenido */
+        padding-bottom: 60px;
+    }
+
+    /* 5. Ajustar Tarjetas de Servicio */
+    .services-grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 15px; /* Menos espacio entre tarjetas */
+    }
+    
+    /* 6. Ajustar Menú de Navegación */
+    .navbar-collapse {
+        background-color: var(--color-blue-dark); /* Fondo oscuro al abrir menú */
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+        border: 1px solid var(--color-gold);
+    }
+    
+    /* 7. Ajustar Video Cards */
+    .video-preview-card {
+        height: 250px; /* Menos altos en celular */
+    }
+}
+
+
 @media (max-width: 768px) { .section-title { font-size: 2rem; } .contact-box { text-align: center !important; } .contact-box .d-grid { margin-top: 20px; } }
