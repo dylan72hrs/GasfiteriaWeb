@@ -3,10 +3,14 @@
    ========================================= */
 :root {
     /* Paleta de Colores GasTeam SEC */
-    --color-blue-dark: #0a1128;  /* Azul marino muy oscuro */
-    --color-blue-medium: #1c2b4f; /* Azul intermedio para tarjetas */
-    --color-gold: #d4af37;       /* Dorado elegante */
-    --color-gold-light: #f9d76e; /* Dorado claro para brillos */
+    --color-blue-dark: #0a1128;
+    /* Azul marino muy oscuro */
+    --color-blue-medium: #1c2b4f;
+    /* Azul intermedio para tarjetas */
+    --color-gold: #d4af37;
+    /* Dorado elegante */
+    --color-gold-light: #f9d76e;
+    /* Dorado claro para brillos */
     --color-white: #ffffff;
     --color-gray-light: #f8f9fa;
     --color-whatsapp: #25D366;
@@ -22,7 +26,8 @@
 body {
     font-family: var(--font-main);
     overflow-x: hidden;
-    background-color: var(--color-blue-dark); /* Fondo base oscuro */
+    background-color: var(--color-blue-dark);
+    /* Fondo base oscuro */
     position: relative;
 }
 
@@ -31,24 +36,41 @@ body {
 body::before {
     content: "";
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    pointer-events: none; /* No interfiere con los clicks */
-    z-index: 9999; /* Por encima de casi todo, pero debajo del navbar/botones */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* No interfiere con los clicks */
+    z-index: 9999;
+    /* Por encima de casi todo, pero debajo del navbar/botones */
     /* Un gradiente radial gigante que sigue las coordenadas del mouse */
-    background: radial-gradient(
-        800px circle at var(--mouse-x) var(--mouse-y), 
-        rgba(212, 175, 55, 0.07), /* Centro dorado muy sutil (7% opacidad) */
-        transparent 50%
-    );
-    will-change: transform; /* Optimización de rendimiento */
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+            rgba(212, 175, 55, 0.07),
+            /* Centro dorado muy sutil (7% opacidad) */
+            transparent 50%);
+    will-change: transform;
+    /* Optimización de rendimiento */
 }
 
 /* Utilidades de Texto y Color */
-.text-gold { color: var(--color-gold) !important; }
-.bg-gold { background-color: var(--color-gold) !important; }
-.bg-dark-blue { background-color: var(--color-blue-dark) !important; }
-.icon-gold { color: var(--color-gold); font-size: 2.5rem; margin-bottom: 1.5rem; }
+.text-gold {
+    color: var(--color-gold) !important;
+}
+
+.bg-gold {
+    background-color: var(--color-gold) !important;
+}
+
+.bg-dark-blue {
+    background-color: var(--color-blue-dark) !important;
+}
+
+.icon-gold {
+    color: var(--color-gold);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
 
 /* Botones Personalizados */
 .btn-gold {
@@ -56,6 +78,7 @@ body::before {
     border: none;
     transition: all 0.3s ease;
 }
+
 .btn-gold:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
@@ -66,23 +89,60 @@ body::before {
     color: var(--color-gold);
     transition: all 0.3s ease;
 }
+
 .btn-outline-gold:hover {
     background-color: var(--color-gold);
     color: var(--color-blue-dark);
 }
 
-.hover-scale:hover { transform: scale(1.05); transition: transform 0.3s; }
+.hover-scale:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
 
 /* Espaciado de Secciones */
-.py-section { padding: 80px 0; }
-.section-title { font-weight: 800; font-size: 2.5rem; margin-bottom: 1rem; }
+.py-section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
 
 /* =========================================
    NAVBAR
    ========================================= */
-.navbar { transition: background-color 0.3s; z-index: 10000; } /* Navbar sobre el brillo */
-.navbar.scrolled { background-color: rgba(10, 17, 40, 0.95); backdrop-filter: blur(10px); }
-.nav-link { font-size: 0.9rem; letter-spacing: 1px; }
+.navbar {
+    transition: background-color 0.3s;
+    z-index: 10000;
+}
+
+/* Navbar sobre el brillo */
+.navbar.scrolled {
+    background-color: rgba(10, 17, 40, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.nav-link {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Logo Responsive */
+.navbar-logo {
+    height: 65px;
+    width: auto;
+    transition: height 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 55px;
+        /* Ajuste para móvil */
+    }
+}
 
 /* =========================================
    HERO CARRUSEL (NUEVO)
@@ -95,23 +155,29 @@ body::before {
 
 .hero-img {
     height: 100vh;
-    object-fit: cover; /* Asegura que la imagen cubra todo sin deformarse */
+    object-fit: cover;
+    /* Asegura que la imagen cubra todo sin deformarse */
 }
 
 /* Capa oscura sobre las imágenes para que se lea el texto */
 .carousel-overlay {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(rgba(10, 17, 40, 0.7), rgba(10, 17, 40, 0.9));
 }
 
 /* Contenedor del texto sobre el carrusel */
 .hero-content {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: 10; /* Sobre el carrusel */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    /* Sobre el carrusel */
     padding-top: 80px;
 }
 
@@ -150,22 +216,31 @@ body::before {
     z-index: 2;
 }
 
-.service-card h3 { font-weight: 700; margin-bottom: 1rem; }
-.service-card p { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; }
+.service-card h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}
 
 /* --- EL EFECTO MÁGICO DEL VIDEO EN LAS TARJETAS --- */
 /* Utiliza las mismas variables globales del mouse */
 .service-card::before {
     content: "";
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border-radius: inherit;
-    background: radial-gradient(
-        400px circle at var(--mouse-x) var(--mouse-y), /* Radio más pequeño para la tarjeta */
-        rgba(212, 175, 55, 0.3), /* Dorado más intenso en la tarjeta */
-        transparent 40%
-    );
+    background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y),
+            /* Radio más pequeño para la tarjeta */
+            rgba(212, 175, 55, 0.3),
+            /* Dorado más intenso en la tarjeta */
+            transparent 40%);
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
@@ -186,10 +261,13 @@ body::before {
    OTRAS SECCIONES
    ========================================= */
 /* Promociones */
-.bg-gold-gradient { background: linear-gradient(135deg, var(--color-blue-dark) 0%, #1e3c72 100%); }
+.bg-gold-gradient {
+    background: linear-gradient(135deg, var(--color-blue-dark) 0%, #1e3c72 100%);
+}
+
 .promo-banner {
     /* Asegúrate de tener esta imagen o cámbiala por una tuya */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1350&q=80'); 
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
     border: 2px solid var(--color-gold);
@@ -201,18 +279,27 @@ body::before {
     padding: 1.5rem;
     background-color: white;
 }
+
 .faq-accordion .accordion-button:not(.collapsed) {
     color: var(--color-blue-dark);
     background-color: rgba(212, 175, 55, 0.1);
-    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
 }
-.faq-accordion .accordion-body { padding: 1.5rem; font-size: 1rem; line-height: 1.6; }
+
+.faq-accordion .accordion-body {
+    padding: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
 
 /* Cuadro Final de Contacto */
-.border-gold { border: 2px solid var(--color-gold); }
+.border-gold {
+    border: 2px solid var(--color-gold);
+}
+
 .contact-box {
     background: linear-gradient(to right, var(--color-blue-medium), var(--color-blue-dark));
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* =========================================
@@ -221,7 +308,8 @@ body::before {
 .whatsapp-float-right {
     position: fixed;
     bottom: 30px;
-    right: 30px; /* DERECHA */
+    right: 30px;
+    /* DERECHA */
     background-color: var(--color-whatsapp);
     color: white;
     width: 65px;
@@ -231,8 +319,9 @@ body::before {
     align-items: center;
     justify-content: center;
     font-size: 35px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-    z-index: 10000; /* Z-index alto para estar sobre el brillo */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    /* Z-index alto para estar sobre el brillo */
     text-decoration: none;
     transition: all 0.3s ease;
     animation: pulse 2s infinite;
@@ -245,18 +334,38 @@ body::before {
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
 }
 
 /* Ajustes Responsivos */
 @media (max-width: 768px) {
-    .hero-content h1 { font-size: 2.5rem; }
-    .section-title { font-size: 2rem; }
-    .contact-box { text-align: center !important; }
-    .contact-box .d-grid { margin-top: 20px; }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .contact-box {
+        text-align: center !important;
+    }
+
+    .contact-box .d-grid {
+        margin-top: 20px;
+    }
 }
+
 /* MANTÉN EL CSS ANTERIOR, PERO AGREGA/REEMPLAZA ESTO AL FINAL */
 
 /* --- VIDEO CARDS (Estilo Instagram) --- */
@@ -267,14 +376,20 @@ body::before {
     border-radius: 15px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
 }
-.video-preview-card:hover { transform: translateY(-5px); }
+
+.video-preview-card:hover {
+    transform: translateY(-5px);
+}
+
 .video-preview-card .overlay {
     position: absolute;
-    bottom: 0; left: 0; right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
     padding: 20px;
     text-align: center;
     color: white;
@@ -292,7 +407,7 @@ body::before {
     display: flex;
     width: max-content;
     /* Animación de desplazamiento */
-    animation: scroll 40s linear infinite; 
+    animation: scroll 40s linear infinite;
 }
 
 /* La tarjeta individual del testimonio */
@@ -302,18 +417,32 @@ body::before {
     margin: 0 15px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     border-left: 4px solid var(--color-gold);
-    white-space: normal; /* Para que el texto se ajuste dentro */
+    white-space: normal;
+    /* Para que el texto se ajuste dentro */
 }
 
-.review-card h6 { font-weight: 800; color: var(--color-blue-dark); }
-.review-card .stars { color: #ffc107; font-weight: bold; margin-top: 10px; }
+.review-card h6 {
+    font-weight: 800;
+    color: var(--color-blue-dark);
+}
+
+.review-card .stars {
+    color: #ffc107;
+    font-weight: bold;
+    margin-top: 10px;
+}
 
 /* Keyframes para mover a la izquierda */
 @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } 
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* --- WHY US CARDS --- */
@@ -321,12 +450,21 @@ body::before {
     background: #fff;
     transition: 0.3s;
 }
-.why-card:hover { border-color: var(--color-gold) !important; transform: translateY(-3px); }
+
+.why-card:hover {
+    border-color: var(--color-gold) !important;
+    transform: translateY(-3px);
+}
 
 /* --- Footer --- */
-footer a { text-decoration: none; transition: 0.3s; }
-footer a:hover { color: var(--color-gold) !important; }
+footer a {
+    text-decoration: none;
+    transition: 0.3s;
+}
 
+footer a:hover {
+    color: var(--color-gold) !important;
+}
 
 
 
@@ -334,213 +472,230 @@ footer a:hover { color: var(--color-gold) !important; }
 
 
 /* =========================================
-   VARIABLES Y CONFIGURACIÓN GENERAL
-   ========================================= */
-:root {
-    --color-blue-dark: #0a1128;
-    --color-blue-medium: #1c2b4f;
-    --color-gold: #d4af37;
-    --color-gold-light: #f9d76e;
-    --color-white: #ffffff;
-    --color-whatsapp: #25D366;
-    --font-main: 'Montserrat', sans-serif;
-    --mouse-x: 50%;
-    --mouse-y: 50%;
-}
-
-body {
-    font-family: var(--font-main);
-    overflow-x: hidden;
-    background-color: var(--color-blue-dark);
-    position: relative;
-}
-
-/* EFECTO BRILLO GLOBAL */
-body::before {
-    content: "";
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999;
-    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(212, 175, 55, 0.07), transparent 50%);
-    will-change: transform;
-}
-
-/* UTILIDADES */
-.text-gold { color: var(--color-gold) !important; }
-.bg-gold { background-color: var(--color-gold) !important; }
-.bg-dark-blue { background-color: var(--color-blue-dark) !important; }
-.icon-gold { color: var(--color-gold); font-size: 2.5rem; margin-bottom: 1.5rem; }
-.z-2 { z-index: 2; }
-
-/* BOTONES */
-.btn-gold { background: linear-gradient(45deg, var(--color-gold), var(--color-gold-light)); border: none; transition: all 0.3s ease; }
-.btn-gold:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4); }
-.btn-outline-gold { border: 2px solid var(--color-gold); color: var(--color-gold); transition: all 0.3s ease; }
-.btn-outline-gold:hover { background-color: var(--color-gold); color: var(--color-blue-dark); }
-.hover-scale:hover { transform: scale(1.05); transition: transform 0.3s; }
-
-.py-section { padding: 80px 0; }
-.section-title { font-weight: 800; font-size: 2.5rem; margin-bottom: 1rem; }
-
-/* NAVBAR */
-.navbar { transition: background-color 0.3s; z-index: 10000; }
-.navbar.scrolled { background-color: rgba(10, 17, 40, 0.95); backdrop-filter: blur(10px); }
-.nav-link { font-size: 0.9rem; letter-spacing: 1px; }
-
-/* =========================================
-   NUEVO: FONDO DE TUBERÍAS UNIFICADO (HERO Y SERVICIOS)
+   MEJORAS RESPONSIVE PRO (Ajuste "Zoom Alejado")
    ========================================= */
 
-/* Clase común para las secciones que llevan el fondo de tuberías */
-.hero-static-bg,
-#servicios.bg-dark-blue {
+/* 1. Base y Normalización de Zoom */
+html {
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* 2. Tipografía Fluida (Clamp ajustado para que no se vea gigante) */
+h1.display-3 {
+    font-size: clamp(1.8rem, 5vw + 1rem, 3.2rem) !important;
+}
+
+.section-title {
+    font-size: clamp(1.6rem, 3vw + 1rem, 2.5rem);
+}
+
+.lead {
+    font-size: clamp(0.95rem, 1.5vw + 0.5rem, 1.2rem);
+}
+
+.btn-lg {
+    padding: clamp(0.6rem, 1.5vw, 0.9rem) clamp(1.5rem, 3vw, 2.5rem);
+    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+}
+
+/* 3. Hero Video Background (Corrección "Aplastado") */
+.hero-static-bg {
     position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    /* Soporte móvil real */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
     overflow: hidden;
 }
 
-.hero-static-bg { min-height: 100vh; padding-top: 80px; } /* Ajuste para la portada */
-
-/* EL PSEUDO-ELEMENTO QUE CONTIENE LA IMAGEN */
-.hero-static-bg::before,
-#servicios.bg-dark-blue::before {
-    content: "";
+/* Video ABSOLUTO para no empujar el contenido */
+.hero-bg-video {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    
-    /* Capa oscura + Tu imagen de fondo */
-    background: linear-gradient(rgba(10, 17, 40, 0.85), rgba(10, 17, 40, 0.85)), url('../img/fondo-servicios.jpg');
-    
-    /* AQUÍ ESTÁ LA SOLUCIÓN: Se repite para llenar todo sin cortarse */
-    background-size: 500px auto; /* Tamaño más pequeño para que el patrón se repita bien */
-    background-repeat: repeat;   /* Se repite como baldosas */
-    background-position: center top;
-    
-    opacity: 0.4; /* Opacidad ajustada (similar al 35%) */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     z-index: 0;
-    pointer-events: none;
 }
 
-/* Asegura que el contenido (texto, tarjetas) quede ENCIMA del fondo */
-#servicios .container { position: relative; z-index: 2; }
-
-/* =========================================
-   TARJETAS DE SERVICIOS
-   ========================================= */
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; padding: 20px; position: relative; z-index: 2; }
-
-.service-card {
-    background-color: rgba(28, 43, 79, 0.85);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    border-radius: 15px; padding: 2px; position: relative; overflow: hidden;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    backdrop-filter: blur(5px);
+.hero-static-bg .container {
+    position: relative;
+    z-index: 2;
+    /* Texto flota sobre el video */
 }
 
-.card-content { background-color: transparent; border-radius: 13px; padding: 40px 30px; height: 100%; text-align: center; position: relative; z-index: 2; }
-.service-card h3 { font-weight: 700; margin-bottom: 1rem; }
-.service-card p { color: rgba(255, 255, 255, 0.8); font-size: 0.95rem; }
-
-/* Efecto Brillo Tarjetas */
-.service-card::before {
-    content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: inherit;
-    background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(212, 175, 55, 0.3), transparent 40%);
-    opacity: 0; transition: opacity 0.3s ease; z-index: 1; pointer-events: none;
+/* 4. Layout y Espaciado ("Aire") */
+.container {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
 }
-.services-grid:hover .service-card::before { opacity: 1; }
-.service-card:hover { border-color: var(--color-gold); transform: translateY(-5px); }
 
-/* =========================================
-   RESTO DE SECCIONES (Videos, Promo, FAQ, Footer...)
-   ========================================= */
-.video-preview-card { height: 350px; background-size: cover; background-position: center; border-radius: 15px; position: relative; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: transform 0.3s; }
-.video-preview-card:hover { transform: translateY(-5px); }
-.video-preview-card .overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.9)); padding: 20px; text-align: center; color: white; }
+@media (max-width: 991px) {
+    .container {
+        max-width: 100%;
+        /* Aprovechar ancho pero con padding */
+    }
 
-.bg-gold-gradient { background: linear-gradient(135deg, var(--color-blue-dark) 0%, #1e3c72 100%); }
-.promo-banner { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; border: 2px solid var(--color-gold); }
+    .py-section,
+    .py-5 {
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+    }
 
-.faq-accordion .accordion-button { font-size: 1.1rem; padding: 1.5rem; background-color: white; }
-.faq-accordion .accordion-button:not(.collapsed) { color: var(--color-blue-dark); background-color: rgba(212, 175, 55, 0.1); }
-.faq-accordion .accordion-body { padding: 1.5rem; }
+    .hero-content {
+        padding-top: 0;
+    }
+}
 
-.marquee-container { width: 100%; overflow: hidden; white-space: nowrap; position: relative; }
-.marquee-track { display: flex; width: max-content; animation: scroll 40s linear infinite; }
-.review-card { background: white; width: 300px; margin: 0 15px; padding: 20px; border-radius: 10px; border-left: 4px solid var(--color-gold); white-space: normal; }
-.review-card h6 { font-weight: 800; color: var(--color-blue-dark); }
-.review-card .stars { color: #ffc107; font-weight: bold; margin-top: 10px; }
-@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-.why-card { background: #fff; transition: 0.3s; }
-.why-card:hover { border-color: var(--color-gold) !important; transform: translateY(-3px); }
-
-.border-gold { border: 2px solid var(--color-gold); }
-.contact-box { background: linear-gradient(to right, var(--color-blue-medium), var(--color-blue-dark)); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-footer a { text-decoration: none; transition: 0.3s; }
-footer a:hover { color: var(--color-gold) !important; }
-
-.whatsapp-float-right { position: fixed; bottom: 30px; right: 30px; background-color: var(--color-whatsapp); color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 10000; text-decoration: none; transition: all 0.3s ease; animation: pulse 2s infinite; }
-.whatsapp-float-right:hover { transform: scale(1.1); background-color: #1ebe57; color: white; }
-@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
-
-
-/* =========================================
-   OPTIMIZACIÓN PARA CELULARES (MÓVIL)
-   ========================================= */
 @media (max-width: 768px) {
-    
-    /* 1. Ajustar Títulos Gigantes */
-    h1.display-3 {
-        font-size: 2.2rem !important; /* Texto más pequeño en el Hero */
-    }
-    .section-title {
-        font-size: 1.8rem; /* Títulos de sección más chicos */
-    }
-    
-    /* 2. Ajustar Fondo de Tuberías en Móvil */
-    .hero-static-bg::before,
-    #servicios.bg-dark-blue::before {
-        /* Hacemos las tuberías de fondo más chicas para que se entienda la textura */
-        background-size: 300px auto; 
-        opacity: 0.25; /* Un poco más suave para leer mejor en pantallas chicas */
-    }
 
-    /* 3. Botones más fáciles de tocar */
-    .hero-content .btn {
-        display: block;      /* Un botón por línea */
-        width: 100%;         /* Ancho completo */
-        margin-right: 0 !important; /* Quitar margen derecho */
-        margin-bottom: 15px; /* Separación entre botones */
-    }
-
-    /* 4. Reducir Espacios en Blanco (Padding) */
-    .py-section {
-        padding: 40px 0; /* Menos espacio arriba y abajo */
-    }
+    /* Hero en móvil */
     .hero-static-bg {
-        padding-top: 100px; /* Ajuste para que no choque con el menú */
-        min-height: auto;   /* Altura automática según el contenido */
-        padding-bottom: 60px;
+        padding: 90px 15px 50px 15px;
     }
 
-    /* 5. Ajustar Tarjetas de Servicio */
-    .services-grid {
-        grid-template-columns: 1fr; /* Una sola columna */
-        gap: 15px; /* Menos espacio entre tarjetas */
+    /* Botones no full-width forzados si no es necesario */
+    .hero-static-bg .btn {
+        display: block;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto 12px auto !important;
     }
-    
-    /* 6. Ajustar Menú de Navegación */
+
+    /* Navbar Collapse refinado */
     .navbar-collapse {
-        background-color: var(--color-blue-dark); /* Fondo oscuro al abrir menú */
+        background: rgba(10, 17, 40, 0.98);
         padding: 20px;
-        border-radius: 10px;
+        border-radius: 15px;
+        border: 1px solid rgba(212, 175, 55, 0.3);
         margin-top: 10px;
-        border: 1px solid var(--color-gold);
     }
-    
-    /* 7. Ajustar Video Cards */
+
+    /* Grid Servicios Móvil (Zoom Out) */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        /* Más espacio entre tarjetas */
+        padding: 0 5px;
+    }
+
+    .service-card {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    /* Video Cards compactas */
     .video-preview-card {
-        height: 250px; /* Menos altos en celular */
+        height: 280px;
+    }
+
+    /* Contacto alineado */
+    .contact-box {
+        text-align: center !important;
+    }
+
+    .contact-box .d-grid {
+        margin-top: 20px;
     }
 }
 
+/* 5. Ajustes para móviles pequeños (iPhone SE / viejos Androids) */
+@media (max-width: 380px) {
+    h1.display-3 {
+        font-size: 1.7rem !important;
+    }
 
-@media (max-width: 768px) { .section-title { font-size: 2rem; } .contact-box { text-align: center !important; } .contact-box .d-grid { margin-top: 20px; } }
+    .badge {
+        font-size: 0.75rem !important;
+        white-space: normal;
+    }
+
+    .btn-lg {
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+/* =========================================
+   FORMULARIO CONTACTO
+   ========================================= */
+.contact-form-card {
+    background: #fff;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form-card .form-control,
+.contact-form-card .form-select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.contact-form-card .form-control:focus,
+.contact-form-card .form-select:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+    background-color: #fff;
+    outline: none;
+}
+
+.contact-form-card label {
+    font-size: 0.95rem;
+    color: var(--color-blue-dark);
+}
+
+/* =========================================
+   ESTILOS PÁGINA PRODUCTOS
+   ========================================= */
+.product-card {
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-gold) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.product-img-container {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.product-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+.small-text-hero {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .product-img-container {
+        height: 220px;
+    }
+}
