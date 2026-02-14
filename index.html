@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="es-CL">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Gasfiteria ATG | Gasfiter Certificado SEC a Domicilio</title>
-    <meta name="description" content="Gasfiter autorizado SEC a domicilio. Expertos en fugas, calefón y destapes. Atendemos Santiago. Emergencias 24/7.">
-    
+    <meta name="description"
+        content="Gasfiter autorizado SEC a domicilio. Expertos en fugas, calefón y destapes. Atendemos Santiago. Emergencias 24/7.">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top py-3">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-                <!-- ✅ CAMBIO: logo más grande (antes 50, ahora 70) -->
-                <img src="img/LOGO DORADO.png" alt="Logo GasTeam SEC" height="70" class="me-2">
+                <!-- ✅ CAMBIO: logo más grande (responsive via CSS) -->
+                <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1771093974/LOGO_DORADO_vkcgez.png"
+                    alt="Logo GasTeam SEC" class="navbar-logo me-2">
                 <span>Gasfiteria <span class="text-gold">ATG</span></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -26,27 +30,78 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav text-uppercase fw-bold">
+                    <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#videos">Videos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#promociones">Ofertas</a></li>
                     <li class="nav-item"><a class="nav-link" href="#testimonios">Opiniones</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-gold ms-lg-3 text-dark px-4" href="#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-gold ms-lg-3 text-dark px-4"
+                            href="#contacto">Contacto</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <header class="hero-static-bg d-flex align-items-center">
+        <!-- ✅ VIDEO FONDO HERO -->
+        <video autoplay muted loop playsinline preload="auto" class="hero-bg-video">
+            <source src="https://res.cloudinary.com/dtlpkqhls/video/upload/v1771102738/0214_pewety.mp4"
+                type="video/mp4">
+        </video>
         <div class="container text-center text-white position-relative z-2">
-            <span class="badge bg-gold text-dark mb-3 fs-6 px-3 py-2 fw-bold animate__animated animate__fadeInDown">LICENCIA SEC VIGENTE</span>
-            <h1 class="display-3 fw-bolder mb-4 animate__animated animate__fadeInUp">Gasfiter Certificado SEC<br>a Domicilio</h1>
-            <p class="lead mb-5 animate__animated animate__fadeInUp animate__delay-1s">Soluciones rápidas, seguras y garantizadas para tu hogar.</p>
+            <span
+                class="badge bg-gold text-dark mb-3 fs-6 px-3 py-2 fw-bold animate__animated animate__fadeInDown">LICENCIA
+                SEC VIGENTE</span>
+            <h1 class="display-3 fw-bolder mb-4 animate__animated animate__fadeInUp">Gasfiter Certificado SEC<br>a
+                Domicilio</h1>
+            <p class="lead mb-5 animate__animated animate__fadeInUp animate__delay-1s">Soluciones rápidas, seguras y
+                garantizadas para tu hogar.</p>
             <div class="animate__animated animate__fadeInUp animate__delay-1s">
-                <a href="https://wa.me/56969163256" class="btn btn-gold btn-lg fw-bold px-5 py-3 me-md-3 mb-3 mb-md-0">COTIZAR AHORA</a>
+                <a href="https://wa.me/56969163256"
+                    class="btn btn-gold btn-lg fw-bold px-5 py-3 me-md-3 mb-3 mb-md-0">COTIZAR AHORA</a>
                 <a href="#servicios" class="btn btn-outline-light btn-lg fw-bold px-5 py-3">VER SERVICIOS</a>
             </div>
         </div>
     </header>
+
+    <!-- ✅ NUEVA SECCIÓN: CERTIFICADO INSTALADOR (Ubicada entre Hero y Servicios) -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Columna Izquierda: Imagen Persona (Centrada en móvil) -->
+                <div class="col-md-5 text-center mb-4 mb-md-0">
+                    <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1771095747/persona_ia_cdytyk.png"
+                        alt="Instalador Certificado SEC" class="img-fluid"
+                        style="max-height: 450px; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));">
+                </div>
+
+                <!-- Columna Derecha: Texto Profesional -->
+                <div class="col-md-7">
+                    <div class="p-4 border border-warning rounded-4 bg-white shadow-sm">
+                        <h2 class="fw-bolder display-6 text-dark-blue mb-2">CERTIFICADO DE <span
+                                class="text-gold">INSTALADOR GAS</span></h2>
+                        <h4 class="text-gold text-uppercase fw-bold mb-4" style="letter-spacing: 2px;">Clase 3</h4>
+
+                        <ul class="list-unstyled fs-5 text-secondary">
+                            <li class="mb-3 border-bottom pb-2">
+                                <i class="fas fa-user-check text-gold me-2"></i>
+                                <strong class="text-dark-blue">Nombre:</strong> ABRAHAM
+                            </li>
+                            <li class="mb-3 border-bottom pb-2">
+                                <i class="fas fa-id-badge text-gold me-2"></i>
+                                <strong class="text-dark-blue">Carrera / Especialidad:</strong> INSTALADOR DE GAS
+                                (GASFITER) CLASE 3
+                            </li>
+                            <li>
+                                <i class="fas fa-university text-gold me-2"></i>
+                                <strong class="text-dark-blue">Institución:</strong> CHILEVALORA
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="servicios" class="py-section bg-dark-blue text-white">
         <div class="container">
@@ -54,12 +109,42 @@
                 <h2 class="section-title">Nuestros Servicios <span class="text-gold">Profesionales</span></h2>
             </div>
             <div class="services-grid" id="services-grid">
-                <div class="service-card"><div class="card-content"><i class="fas fa-tint icon-gold"></i><h3>Termofusión PPR/PEX</h3><p>Cero fugas, máxima durabilidad.</p></div></div>
-                <div class="service-card"><div class="card-content"><i class="fas fa-fire-alt icon-gold"></i><h3>Gas y Calefont SEC</h3><p>Instalación y certificación TC6.</p></div></div>
-                <div class="service-card"><div class="card-content"><i class="fas fa-toilet icon-gold"></i><h3>Alcantarillado</h3><p>Destapes y proyectos sanitarios.</p></div></div>
-                <div class="service-card"><div class="card-content"><i class="fas fa-cogs icon-gold"></i><h3>Salas de Máquinas</h3><p>Bombas y centrales térmicas.</p></div></div>
-                <div class="service-card"><div class="card-content"><i class="fas fa-search-location icon-gold"></i><h3>Detección de Fugas</h3><p>Tecnología ultrasonido y gas trazador.</p></div></div>
-                <div class="service-card"><div class="card-content"><i class="fas fa-drafting-compass icon-gold"></i><h3>Proyectos</h3><p>Planos y regularizaciones.</p></div></div>
+                <div class="service-card">
+                    <div class="card-content"><i class="fas fa-tint icon-gold"></i>
+                        <h3>Termofusión PPR/PEX</h3>
+                        <p>Cero fugas, máxima durabilidad.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="card-content"><i class="fas fa-fire-alt icon-gold"></i>
+                        <h3>Gas y Calefont SEC</h3>
+                        <p>Instalación y certificación TC6.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="card-content"><i class="fas fa-toilet icon-gold"></i>
+                        <h3>Alcantarillado</h3>
+                        <p>Destapes y proyectos sanitarios.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="card-content"><i class="fas fa-cogs icon-gold"></i>
+                        <h3>Salas de Máquinas</h3>
+                        <p>Bombas y centrales térmicas.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="card-content"><i class="fas fa-search-location icon-gold"></i>
+                        <h3>Detección de Fugas</h3>
+                        <p>Tecnología ultrasonido y gas trazador.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="card-content"><i class="fas fa-drafting-compass icon-gold"></i>
+                        <h3>Proyectos</h3>
+                        <p>Planos y regularizaciones.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -72,37 +157,49 @@
             </div>
             <div class="row g-4">
                 <div class="col-md-3">
-                    <div class="video-preview-card" style="background-image: url('https://aquagasfiter.cl/assets/images/87941114-2556965907954906-390328831178702848-n-1014x1014.jpg');">
+                    <div class="video-preview-card"
+                        style="background-image: url('https://aquagasfiter.cl/assets/images/87941114-2556965907954906-390328831178702848-n-1014x1014.jpg');">
                         <div class="overlay">
                             <h5>INSTALACIÓN CALEFONT</h5>
-                            <a href="https://www.instagram.com/reel/DTMCBqjESWA/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" target="_blank" class="btn btn-primary btn-sm">VER MÁS <i class="fas fa-arrow-right"></i></a>
+                            <a href="https://www.instagram.com/reel/DTMCBqjESWA/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA=="
+                                target="_blank" class="btn btn-primary btn-sm">VER MÁS <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-3">
-                    <div class="video-preview-card" style="background-image: url('https://ragasfiteria.cl/media/k2/items/cache/6ddb2450462828abf9aabc88d6bfb7fe_XL.jpg');">
+                    <div class="video-preview-card"
+                        style="background-image: url('https://ragasfiteria.cl/media/k2/items/cache/6ddb2450462828abf9aabc88d6bfb7fe_XL.jpg');">
                         <div class="overlay">
                             <h5>DETECCIÓN FUGAS</h5>
-                            <a href="https://www.instagram.com/reel/DTL5AKnkZiE/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" target="_blank" class="btn btn-primary btn-sm">VER MÁS <i class="fas fa-arrow-right"></i></a>
+                            <a href="https://www.instagram.com/reel/DTL5AKnkZiE/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA=="
+                                target="_blank" class="btn btn-primary btn-sm">VER MÁS <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-3">
-                    <div class="video-preview-card" style="background-image: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=500&q=80');">
+                    <div class="video-preview-card"
+                        style="background-image: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=500&q=80');">
                         <div class="overlay">
                             <h5>DESTAPES</h5>
-                            <a href="https://www.instagram.com/reel/DTL26CDkSx2/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" target="_blank" class="btn btn-primary btn-sm">VER MÁS <i class="fas fa-arrow-right"></i></a>
+                            <a href="https://www.instagram.com/reel/DTL26CDkSx2/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA=="
+                                target="_blank" class="btn btn-primary btn-sm">VER MÁS <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-3">
-                    <div class="video-preview-card" style="background-image: url('https://www.bitinstalacions.com/wp-content/uploads/2021/12/servicios-sala-maquinas-vivienda-1.jpg');">
+                    <div class="video-preview-card"
+                        style="background-image: url('https://www.bitinstalacions.com/wp-content/uploads/2021/12/servicios-sala-maquinas-vivienda-1.jpg');">
                         <div class="overlay">
                             <h5>SALA DE MÁQUINAS</h5>
-                            <a href="https://www.instagram.com/p/DTL1X3OEYoI/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" target="_blank" class="btn btn-primary btn-sm">VER MÁS <i class="fas fa-arrow-right"></i></a>
+                            <a href="https://www.instagram.com/p/DTL1X3OEYoI/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA=="
+                                target="_blank" class="btn btn-primary btn-sm">VER MÁS <i
+                                    class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -116,10 +213,12 @@
                 <div class="col-lg-7 text-white">
                     <h4 class="fw-bold mb-3"><i class="fas fa-gift me-2"></i> OFERTA ESPECIAL DE TEMPORADA</h4>
                     <h2 class="display-5 fw-bolder mb-4">Pack Mantención: Calefont + Limpieza</h2>
-                    <p class="fs-4 mb-0">Precio Oferta: <span class="display-6 fw-bold text-dark bg-warning px-3 rounded">$99.990</span></p>
+                    <p class="fs-4 mb-0">Precio Oferta: <span
+                            class="display-6 fw-bold text-dark bg-warning px-3 rounded">$99.990</span></p>
                 </div>
                 <div class="col-lg-5 text-center mt-4 mt-lg-0">
-                    <a href="https://wa.me/56969163256?text=Quiero%20la%20promo" class="btn btn-dark btn-lg fw-bold px-5 py-4 w-100 fs-4 shadow hover-scale">¡LO QUIERO!</a>
+                    <a href="https://wa.me/56969163256?text=Quiero%20la%20promo"
+                        class="btn btn-dark btn-lg fw-bold px-5 py-4 w-100 fs-4 shadow hover-scale">¡LO QUIERO!</a>
                 </div>
             </div>
         </div>
@@ -133,7 +232,8 @@
                     <div class="why-card p-4 border rounded shadow-sm h-100">
                         <i class="fas fa-certificate text-success fa-3x mb-3"></i>
                         <h5 class="fw-bold">TÉCNICOS CERTIFICADOS</h5>
-                        <p class="small text-muted">Equipo con certificaciones vigentes SEC y procedimientos seguros.</p>
+                        <p class="small text-muted">Equipo con certificaciones vigentes SEC y procedimientos seguros.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -147,7 +247,8 @@
                     <div class="why-card p-4 border rounded shadow-sm h-100">
                         <i class="fas fa-file-invoice-dollar text-primary fa-3x mb-3"></i>
                         <h5 class="fw-bold">PRESUPUESTO CLARO</h5>
-                        <p class="small text-muted">Diagnóstico transparente antes de cualquier trabajo. Sin sorpresas.</p>
+                        <p class="small text-muted">Diagnóstico transparente antes de cualquier trabajo. Sin sorpresas.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -165,7 +266,7 @@
         <div class="container text-center mb-4">
             <h2 class="fw-bold text-dark-blue">Experiencias por <span class="text-gold">Servicios ⭐</span></h2>
         </div>
-        
+
         <div class="marquee-container">
             <div class="marquee-track">
                 <div class="review-card">
@@ -193,7 +294,7 @@
                     <p>"Encendió de inmediato y quedó regulado. Garantía escrita."</p>
                     <div class="stars">★★★★★ 4.9</div>
                 </div>
-                
+
                 <div class="review-card">
                     <h6>Juan Salas <small class="text-muted">- Gasfitería</small></h6>
                     <p>"Repararon la filtración en horas y dejaron todo limpio. 10/10."</p>
@@ -221,8 +322,10 @@
     <section class="bg-dark-blue py-5 text-center">
         <div class="container">
             <h3 class="text-gold mb-4">Nuestra Tarjeta Digital</h3>
-            <!-- ✅ se mantiene el nombre EXACTO que tienes en GitHub -->
-            <img src="img/tarjeta.png.PNG" alt="Tarjeta GasTeam" class="img-fluid rounded shadow-lg border-gold" style="max-width: 600px;">
+            <!-- ✅ Tarjeta Digital Centrada -->
+            <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1771094071/tarjeta.png_anix7w.png"
+                alt="Tarjeta GasTeam" class="img-fluid rounded shadow-lg border-gold"
+                style="max-width: 600px; width: 100%;" loading="lazy">
         </div>
     </section>
 
@@ -235,7 +338,8 @@
                         <h4 class="fw-bold">¡Envíenos un video!</h4>
                         <p>Grabe el problema (fuga, calefont, etc) y envíelo por WhatsApp.</p>
                         <div class="alert alert-success">
-                            <small>Esto nos permite darle un <strong>presupuesto aproximado</strong> y llegar con los repuestos listos.</small>
+                            <small>Esto nos permite darle un <strong>presupuesto aproximado</strong> y llegar con los
+                                repuestos listos.</small>
                         </div>
                         <a href="https://wa.me/56969163256" class="btn btn-success w-100 fw-bold">ENVIAR VIDEO AHORA</a>
                     </div>
@@ -270,13 +374,98 @@
 
     <section id="faq" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center section-title text-dark-blue mb-5">Preguntas <span class="text-gold">Frecuentes</span></h2>
+            <h2 class="text-center section-title text-dark-blue mb-5">Preguntas <span
+                    class="text-gold">Frecuentes</span></h2>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="accordion faq-accordion" id="faqAccordion">
-                        <div class="accordion-item mb-2 border-0 shadow-sm"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">¿Entregan certificado SEC?</button></h2><div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Sí, emitimos certificado TC6 para todas las instalaciones de gas que lo requieran.</div></div></div>
-                        <div class="accordion-item mb-2 border-0 shadow-sm"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">¿Garantía de trabajos?</button></h2><div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Absolutamente. Todos nuestros trabajos cuentan con garantía legal por escrito.</div></div></div>
-                        <div class="accordion-item mb-2 border-0 shadow-sm"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">¿Atienden urgencias?</button></h2><div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Sí, tenemos turnos 24/7 para emergencias sanitarias y de gas.</div></div></div>
+                        <div class="accordion-item mb-2 border-0 shadow-sm">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq1">¿Entregan certificado SEC?</button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Sí, emitimos certificado TC6 para todas las instalaciones de
+                                    gas que lo requieran.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2 border-0 shadow-sm">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq2">¿Garantía de trabajos?</button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Absolutamente. Todos nuestros trabajos cuentan con garantía
+                                    legal por escrito.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2 border-0 shadow-sm">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq3">¿Atienden urgencias?</button></h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Sí, tenemos turnos 24/7 para emergencias sanitarias y de
+                                    gas.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ NUEVA SECCIÓN: CONTACTO (WHATSAPP FORM) -->
+    <section id="contacto" class="py-5 bg-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form-card p-4 p-md-5 border rounded-4 shadow-sm">
+                        <div class="text-center mb-4">
+                            <h2 class="fw-bold text-dark-blue">Contáctanos</h2>
+                            <p class="text-muted">Completa tus datos y te escribimos por WhatsApp.</p>
+                        </div>
+                        <form id="whatsappForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label fw-bold">Nombre <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="nombre" placeholder="Tu nombre"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="telefono" class="form-label fw-bold">Teléfono WhatsApp <span
+                                            class="text-danger">*</span></label>
+                                    <input type="tel" class="form-control" id="telefono" placeholder="+569..." required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="motivo" class="form-label fw-bold">Motivo <span
+                                            class="text-danger">*</span></label>
+                                    <select class="form-select" id="motivo" required>
+                                        <option value="" selected disabled>Selecciona una opción...</option>
+                                        <option value="Fuga de agua">Fuga de agua</option>
+                                        <option value="Fuga de gas">Fuga de gas</option>
+                                        <option value="Instalación / Mantención calefont">Instalación / Mantención
+                                            calefont</option>
+                                        <option value="Limpieza de cañerías">Limpieza de cañerías</option>
+                                        <option value="Destape alcantarillado / WC">Destape alcantarillado / WC</option>
+                                        <option value="Certificación SEC / TC6">Certificación SEC / TC6</option>
+                                        <option value="Otro">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="correo" class="form-label fw-bold">Correo (Opcional)</label>
+                                    <input type="email" class="form-control" id="correo"
+                                        placeholder="ejemplo@correo.com">
+                                </div>
+                                <div class="col-12">
+                                    <label for="detalle" class="form-label fw-bold">Detalle (Opcional)</label>
+                                    <textarea class="form-control" id="detalle" rows="3"
+                                        placeholder="Cuéntanos más detalles..."></textarea>
+                                </div>
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-success btn-lg fw-bold px-5 hover-scale">
+                                        <i class="fab fa-whatsapp me-2"></i> ENVIAR POR WHATSAPP
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -288,16 +477,20 @@
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <h4 class="text-gold mb-3">Gasfiteria ATG</h4>
-                    <p>Somos una empresa seria y responsable. Resolvemos tus problemas de Gasfitería General con herramientas de última tecnología.</p>
+                    <p>Somos una empresa seria y responsable. Resolvemos tus problemas de Gasfitería General con
+                        herramientas de última tecnología.</p>
 
                     <div class="mt-3 d-flex gap-3">
-                        <a href="https://www.instagram.com/gasfiteria_atg/" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Abrir Instagram">
+                        <a href="https://www.instagram.com/gasfiteria_atg/" target="_blank" rel="noopener noreferrer"
+                            class="text-white" aria-label="Abrir Instagram">
                             <i class="fab fa-instagram fa-2x"></i>
                         </a>
-                        <a href="https://wa.me/56969163256" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Abrir WhatsApp">
+                        <a href="https://wa.me/56969163256" target="_blank" rel="noopener noreferrer" class="text-white"
+                            aria-label="Abrir WhatsApp">
                             <i class="fab fa-whatsapp fa-2x"></i>
                         </a>
-                        <a href="https://www.tiktok.com/@gasfiteria_atg" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Abrir TikTok">
+                        <a href="https://www.tiktok.com/@gasfiteria_atg" target="_blank" rel="noopener noreferrer"
+                            class="text-white" aria-label="Abrir TikTok">
                             <i class="fab fa-tiktok fa-2x"></i>
                         </a>
                     </div>
@@ -318,7 +511,9 @@
                     <h5 class="text-white mb-3">Medios de Pago</h5>
                     <p class="small text-white-50">Aceptamos todo medio de pago en terreno.</p>
                     <!-- ✅ se mantiene el nombre EXACTO que tienes en GitHub -->
-                    <img src="img/webpay.png.PNG" alt="Webpay" class="img-fluid bg-white p-2 rounded" style="max-width: 200px;">
+                    <!-- ✅ Cloudinary Webpay -->
+                    <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1771093972/webpay.png_ge1meb.png"
+                        alt="Webpay" class="img-fluid bg-white p-2 rounded" style="max-width: 200px;" loading="lazy">
                 </div>
             </div>
             <hr class="border-secondary">
@@ -335,9 +530,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
-
-
-
-
-
