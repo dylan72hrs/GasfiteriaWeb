@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catálogo | Gasfiteria ATG</title>
+    <meta name="description" content="Catálogo de productos de gasfitería con entrega e instalación garantizada.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos específicos overlay hover */
+        .overlay-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 17, 40, 0.4);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-card:hover .overlay-hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-blue fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1771093974/LOGO_DORADO_vkcgez.png"
+                    alt="Logo GasTeam SEC" class="navbar-logo me-2">
+                <span>Gasfiteria <span class="text-gold">ATG</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav text-uppercase fw-bold">
+                    <li class="nav-item"><a class="nav-link active text-gold" href="productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#videos">Videos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#promociones">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#testimonios">Opiniones</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-gold ms-lg-3 text-dark px-4"
+                            href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO PRODUCTOS SIMPLIFICADO -->
+    <header class="hero-static-bg d-flex align-items-center position-relative">
+        <video autoplay muted loop playsinline class="hero-bg-video">
+            <source src="https://res.cloudinary.com/dtlpkqhls/video/upload/v1771104906/0214_2_sibhah.mp4"
+                type="video/mp4">
+        </video>
+        <!-- Overlay -->
+        <div class="carousel-overlay"></div>
+
+        <div class="container text-center text-white position-relative z-2">
+            <h1 class="display-3 fw-bolder mb-0 animate__animated animate__fadeInUp">Catálogo de <span
+                    class="text-gold">Productos</span></h1>
+        </div>
+    </header>
+
+    <!-- LISTADO DE PRODUCTOS -->
+    <section class="py-section bg-light">
+        <div class="container">
+            <!-- Grid Dinámico Cargado con JS -->
+            <div class="row g-4 justify-content-center" id="products-dynamic-grid">
+                <!-- Los productos se inyectarán aquí -->
+                <div class="col-12 text-center py-5">
+                    <div class="spinner-border text-gold" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ALERTA LEGAL -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="alert alert-warning border-gold rounded-4 text-center p-4 shadow-sm" role="alert">
+                        <i class="fas fa-info-circle fa-2x text-gold mb-2"></i>
+                        <h5 class="fw-bold text-dark-blue">Importante</h5>
+                        <p class="mb-0 text-dark">Los productos se venden sin garantía. Si requieres instalación, la
+                            garantía corresponde solo al trabajo realizado por nuestros técnicos certificados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4 class="text-gold mb-3">Gasfiteria ATG</h4>
+                    <p>Somos una empresa seria y responsable. Resolvemos tus problemas de Gasfitería General con
+                        herramientas de última tecnología.</p>
+
+                    <div class="mt-3 d-flex gap-3">
+                        <a href="https://www.instagram.com/gasfiteria_atg/" target="_blank" rel="noopener noreferrer"
+                            class="text-white" aria-label="Abrir Instagram">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="https://wa.me/56969163256" target="_blank" rel="noopener noreferrer" class="text-white"
+                            aria-label="Abrir WhatsApp">
+                            <i class="fab fa-whatsapp fa-2x"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@gasfiteria_atg" target="_blank" rel="noopener noreferrer"
+                            class="text-white" aria-label="Abrir TikTok">
+                            <i class="fab fa-tiktok fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white mb-3">Cobertura</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li>Regiones todo chile</li>
+                        <li>Santiago Centro</li>
+                        <li>Providencia / Las Condes</li>
+                        <li>Ñuñoa / La Reina</li>
+                        <li>Maipú / Cerrillos</li>
+                        <li>La Florida / Puente Alto</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white mb-3">Medios de Pago</h5>
+                    <p class="small text-white-50">Aceptamos todo medio de pago en terreno.</p>
+                    <img src="https://res.cloudinary.com/dtlpkqhls/image/upload/v1771093972/webpay.png_ge1meb.png"
+                        alt="Webpay" class="img-fluid bg-white p-2 rounded" style="max-width: 200px;" loading="lazy">
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center text-secondary small">
+                &copy; 2026 Gasfiteria ATG. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/56969163256" class="whatsapp-float-right" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/products_data.js"></script>
+    <script src="js/products_list.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
