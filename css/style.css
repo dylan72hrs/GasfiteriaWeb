@@ -752,3 +752,13 @@ h1.display-3 {
         transform: translateY(-5px);
     }
 }
+
+/* --- CAMBIO VIDEO PERSONA (IPHONE COMPATIBILIDAD) --- */
+.mi-video-persona {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: transparent;
+    /* por si acaso */
+    object-fit: contain;
+}
