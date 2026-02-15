@@ -754,11 +754,30 @@ h1.display-3 {
 }
 
 /* --- CAMBIO VIDEO PERSONA (IPHONE COMPATIBILIDAD) --- */
-.mi-video-persona {
+.video-wrap {
     width: 100%;
-    height: auto;
-    display: block;
+    max-width: 600px;
+    /* Ajustado para los videos de secciones */
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    /* Ratio estándar */
+    overflow: hidden;
+    border-radius: 14px;
     background: transparent;
-    /* por si acaso */
-    object-fit: contain;
+    /* importante */
+}
+
+.video-el {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    /* CLAVE: elimina marcos */
+    border-radius: inherit;
+}
+
+.mi-video-persona-wrap {
+    max-width: 520px;
+    aspect-ratio: 4 / 5;
+    /* Ratio para el video vertical de la persona */
 }
