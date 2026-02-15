@@ -69,11 +69,27 @@
         <div class="container text-center text-white position-relative z-2">
             <h1 class="display-3 fw-bolder mb-0 animate__animated animate__fadeInUp">Catálogo de <span
                     class="text-gold">Productos</span></h1>
+
+            <!-- ✅ VIDEO PRODUCTOS -->
+            <div class="text-center my-4 animate__animated animate__fadeInUp animate__delay-1s">
+                <video autoplay muted loop playsinline class="rounded shadow-sm"
+                    style="max-width: 600px; width: 100%; height: auto;">
+                    <source
+                        src="https://res.cloudinary.com/dtlpkqhls/video/upload/v1771129855/este_en_productos_cortte_yrfnly.webm"
+                        type="video/webm">
+                </video>
+            </div>
+        </div>
+
+        <!-- ✅ SCROLL DOWN INDICATOR -->
+        <div class="scroll-down-indicator animate__animated animate__fadeIn animate__delay-2s" data-target="#catalogo">
+            <p class="text-white text-uppercase mb-0">Explora nuestros productos</p>
+            <i class="fas fa-chevron-down text-gold fa-2x mt-2"></i>
         </div>
     </header>
 
     <!-- LISTADO DE PRODUCTOS -->
-    <section class="py-section bg-light">
+    <section id="catalogo" class="py-section bg-light">
         <div class="container">
             <!-- Grid Dinámico Cargado con JS -->
             <div class="row g-4 justify-content-center" id="products-dynamic-grid">
