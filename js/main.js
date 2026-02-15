@@ -73,4 +73,41 @@ document.addEventListener("DOMContentLoaded", () => {
             window.open(url, '_blank');
         });
     }
+    // ==========================================
+    // SCROLL INDICATOR LOGIC (SMOOTH SCROLL + BOUNCE)
+    // ==========================================
+    const scrollIndicators = document.querySelectorAll('.scroll-down-indicator');
+
+    scrollIndicators.forEach(indicator => {
+        indicator.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            // Determinar el destino basado en el atributo data-target o el siguiente elemento
+            // Si tiene data-target, usa ese ID. Si no, busca la siguiente sección.
+            let targetId = indicator.getAttribute('data-target');
+            let targetElement;
+
+            if (targetId) {
+                targetElement = document.querySelector(targetId);
+            } else {
+                // Fallback: siguiente sección hermana del header
+                const header = indicator.closest('header');
+                targetElement = header ? header.nextElementSibling : null;
+            }
+
+            if (targetElement) {
+                // Calcular posición con offset para el navbar fijo (aprox 80px)
+                // Usamos un offset un poco mayor para que no quede pegado al borde
+                const offset = 100;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                // Scroll suave nativo
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
 });
