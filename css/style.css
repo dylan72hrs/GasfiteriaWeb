@@ -776,8 +776,21 @@ h1.display-3 {
     border-radius: inherit;
 }
 
-.mi-video-persona-wrap {
+/* --- CAMBIO VIDEO PERSONA (Renderizado Perfecto) --- */
+.video-persona-wrap {
+    width: 100%;
     max-width: 520px;
-    aspect-ratio: 4 / 5;
-    /* Ratio para el video vertical de la persona */
+    margin: 0 auto;
+    background: transparent !important;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: none !important;
+}
+
+.video-persona {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: transparent !important;
+    object-fit: contain;
 }
