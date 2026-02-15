@@ -85,16 +85,16 @@
             <div class="row align-items-center">
                 <!-- Columna Izquierda: Imagen Persona (Centrada en móvil) -->
                 <div class="col-lg-6 col-md-6 text-center mb-4 mb-md-0">
-                    <div class="video-wrap mi-video-persona-wrap shadow-lg">
-                        <video class="video-el" autoplay muted loop playsinline webkit-playsinline preload="metadata">
-                            <!-- iPhone/Safari: MP4 primero -->
-                            <source
-                                src="https://res.cloudinary.com/dtlpkqhls/video/upload/v1771123300/VIDEO_OFICIAL_ABHRAM_fonex7.mp4"
-                                type="video/mp4">
-                            <!-- Chrome/otros: WebM -->
+                    <div class="video-persona-wrap">
+                        <video class="video-persona" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                            <!-- 1) PC/Chrome/Edge/Firefox (si quieres mantener webm) -->
                             <source
                                 src="https://res.cloudinary.com/dtlpkqhls/video/upload/v1771123300/VIDEO_OFICIAL_ABHRAM_fonex7.webm"
                                 type="video/webm">
+                            <!-- 2) iPhone/Safari fallback (MP4 con fondo igual al bloque, NO transparente) -->
+                            <source
+                                src="https://res.cloudinary.com/dtlpkqhls/video/upload/v1771123300/VIDEO_OFICIAL_ABHRAM_fonex7.mp4"
+                                type="video/mp4">
                         </video>
                     </div>
                 </div>
