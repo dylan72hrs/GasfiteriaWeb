@@ -85,13 +85,18 @@
             <div class="row align-items-center">
                 <!-- Columna Izquierda: Imagen Persona (Centrada en móvil) -->
                 <div class="col-lg-6 col-md-6 text-center mb-4 mb-md-0">
-                    <video autoplay muted loop playsinline class="mi-video-persona"
-                        style="max-height: 900px; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));">
-                        <source
-                            src="https://res.cloudinary.com/dtlpkqhls/video/upload/v1771123300/VIDEO_OFICIAL_ABHRAM_fonex7.webm"
-                            type="video/webm">
-                        <source src="TU_VIDEO_FONDO_CREMA.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-wrap mi-video-persona-wrap shadow-lg">
+                        <video class="video-el" autoplay muted loop playsinline webkit-playsinline preload="metadata">
+                            <!-- iPhone/Safari: MP4 primero -->
+                            <source
+                                src="https://res.cloudinary.com/dtlpkqhls/video/upload/v1771123300/VIDEO_OFICIAL_ABHRAM_fonex7.mp4"
+                                type="video/mp4">
+                            <!-- Chrome/otros: WebM -->
+                            <source
+                                src="https://res.cloudinary.com/dtlpkqhls/video/upload/v1771123300/VIDEO_OFICIAL_ABHRAM_fonex7.webm"
+                                type="video/webm">
+                        </video>
+                    </div>
                 </div>
 
                 <!-- Columna Derecha: Texto Profesional -->
@@ -264,12 +269,16 @@
 
             <!-- ✅ VIDEO "POR QUÉ ELEGIRNOS" -->
             <div class="text-center mb-5">
-                <video autoplay muted loop playsinline class="rounded shadow-sm"
-                    style="max-width: 600px; width: 100%; height: auto;">
-                    <source
-                        src="https://res.cloudinary.com/dtlpkqhls/video/upload/v1771129170/porque_elegirnos_mjb8df.webm"
-                        type="video/webm">
-                </video>
+                <div class="video-wrap shadow-sm">
+                    <video class="video-el" autoplay muted loop playsinline webkit-playsinline preload="metadata">
+                        <source
+                            src="https://res.cloudinary.com/dtlpkqhls/video/upload/v1771129170/porque_elegirnos_mjb8df.mp4"
+                            type="video/mp4">
+                        <source
+                            src="https://res.cloudinary.com/dtlpkqhls/video/upload/v1771129170/porque_elegirnos_mjb8df.webm"
+                            type="video/webm">
+                    </video>
+                </div>
             </div>
 
             <div class="row g-4">
