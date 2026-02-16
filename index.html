@@ -86,11 +86,16 @@
                 <!-- Columna Izquierda: Imagen Persona (Centrada en móvil) -->
                 <div class="col-lg-6 col-md-6 text-center mb-4 mb-md-0">
                     <div class="video-wrap">
-                        <video class="video-fluid" autoplay muted loop playsinline webkit-playsinline preload="auto"
-                            disablepictureinpicture controlslist="nodownload noplaybackrate" aria-label="Video">
+                        <video class="video-fluid" autoplay muted loop playsinline webkit-playsinline preload="metadata"
+                            disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback">
+                            <!-- MP4 H.264 (universal) -->
                             <source
-                                src="https://res.cloudinary.com/dtlpkqhls/video/upload/f_auto,q_auto/v1771227011/abream_1_zciisd.mp4"
-                                type="video/mp4">
+                                src="https://res.cloudinary.com/dtlpkqhls/video/upload/vc_h264,f_mp4,q_auto/abream_1_zciisd.mp4"
+                                type="video/mp4" />
+                            <!-- WEBM fallback -->
+                            <source
+                                src="https://res.cloudinary.com/dtlpkqhls/video/upload/f_webm,q_auto/abream_1_zciisd.webm"
+                                type="video/webm" />
                         </video>
                     </div>
                 </div>
@@ -266,11 +271,16 @@
             <!-- ✅ VIDEO "POR QUÉ ELEGIRNOS" -->
             <div class="text-center mb-5">
                 <div class="video-wrap shadow-sm">
-                    <video class="video-fluid" autoplay muted loop playsinline webkit-playsinline preload="auto"
-                        disablepictureinpicture controlslist="nodownload noplaybackrate" aria-label="Video">
+                    <video class="video-fluid" autoplay muted loop playsinline webkit-playsinline preload="metadata"
+                        disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback">
+                        <!-- MP4 H.264 (universal) -->
                         <source
-                            src="https://res.cloudinary.com/dtlpkqhls/video/upload/f_auto,q_auto/v1771226510/porque_elegirnos_prueba_bwfhrn.mp4"
-                            type="video/mp4">
+                            src="https://res.cloudinary.com/dtlpkqhls/video/upload/vc_h264,f_mp4,q_auto/porque_elegirnos_prueba_bwfhrn.mp4"
+                            type="video/mp4" />
+                        <!-- WEBM fallback -->
+                        <source
+                            src="https://res.cloudinary.com/dtlpkqhls/video/upload/f_webm,q_auto/porque_elegirnos_prueba_bwfhrn.webm"
+                            type="video/webm" />
                     </video>
                 </div>
             </div>
