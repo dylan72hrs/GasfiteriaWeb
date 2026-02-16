@@ -794,3 +794,34 @@ h1.display-3 {
     background: transparent !important;
     object-fit: contain;
 }
+
+/* Contenedor universal para videos (evita marcos, adapta en mobile) */
+.video-wrap {
+    width: 100%;
+    max-width: 520px;
+    /* ajusta al look original (PC) */
+    margin: 0 auto;
+    /* centrado */
+    border-radius: 18px;
+    overflow: hidden;
+    background: transparent;
+    /* NO negro */
+}
+
+/* El video se adapta sin deformarse */
+.video-fluid {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    /* clave: evita barras / marcos */
+    background: transparent;
+}
+
+/* MOBILE: que no quede gigante y no rompa el diseño */
+@media (max-width: 768px) {
+    .video-wrap {
+        max-width: 92vw;
+        border-radius: 16px;
+    }
+}
